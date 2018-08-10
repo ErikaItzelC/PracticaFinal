@@ -1,0 +1,17 @@
+<% include _header %>
+<h1> Bienvenido al sistema de Citas!</h1>
+
+<% usuarios.forEach((usuario) => { %>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <a href="/usuarios/<%= usuario.username %>">
+            <%= usuario.name() %>
+        </a>
+    </div>
+    <% if(usuario.apellido_P) { %>
+        <div class="panel-body"><%= usuario.apellido_P %></div>
+<% } %>
+</div>
+<% }) %>
+
+<% include _footer %>

@@ -1,0 +1,13 @@
+<% include _header %>
+<h1> Citas! 
+<a href="/addCitas" class="btn btn-primary pull-right" role="button"> Agregar citas </a></h1>
+<% citas.forEach((cita) => { %>
+<div class="panel panel-info">
+    <div class="panel-heading">
+         <p><%= cita.paciente_nombre %> <%= cita.paciente_apellidoP %> <%= cita.paciente_apellidoM %> <%= cita.fecha %></p>
+    </div>
+ 
+</div>
+<% }) %>
+
+<% include _footer %>

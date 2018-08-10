@@ -1,0 +1,28 @@
+<% include _header %>
+
+<h1>Registro de citas</h1>
+
+<form action="/addCitas" method="post">
+    <div class="form-group">
+        <input name="paciente_nombre" type="text" class="form-control"
+        placeholder="Nombre del Paciente" required autofocus/>
+    </div>
+    <div class="form-group">
+        <input name="paciente_apellidoP" type="text" class="form-control"
+        placeholder="Apellido Paterno" required/>
+    </div>
+    <div class="form-group">
+        <input name="paciente_apellidoM" type="text" class="form-control"
+        placeholder="Apellido Materno" required/>
+    </div>
+    <div class="form-group">
+        <input name="telefono" type="text" class="form-control"
+        placeholder="telefono" required/>
+    </div>
+    <label>
+        Fecha <input name="fecha" type="date"> 
+    </label>
+    <input type="submit" value="Registrarse" class="btn btn-primary btn-block"/>
+</form>
+
+<% include _footer %>
